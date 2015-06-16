@@ -1,0 +1,192 @@
+2015.06.16 16:24:41 LOG7[140735181681408]: Clients allowed=125
+2015.06.16 16:24:41 LOG5[140735181681408]: stunnel 5.07 on x86_64-apple-darwin13.4.0 platform
+2015.06.16 16:24:41 LOG5[140735181681408]: Compiled with OpenSSL 1.0.1j 15 Oct 2014
+2015.06.16 16:24:41 LOG5[140735181681408]: Running  with OpenSSL 1.0.2a 19 Mar 2015
+2015.06.16 16:24:41 LOG5[140735181681408]: Update OpenSSL shared libraries or rebuild stunnel
+2015.06.16 16:24:41 LOG5[140735181681408]: Threading:PTHREAD Sockets:SELECT,IPv6 SSL:ENGINE,OCSP,FIPS
+2015.06.16 16:24:41 LOG7[140735181681408]: errno: (*__error())
+2015.06.16 16:24:41 LOG5[140735181681408]: Reading configuration from file /sw/etc/stunnel/stunnel_client.cnf
+2015.06.16 16:24:41 LOG5[140735181681408]: UTF-8 byte order mark not detected
+2015.06.16 16:24:41 LOG5[140735181681408]: FIPS mode disabled
+2015.06.16 16:24:41 LOG7[140735181681408]: Compression disabled
+2015.06.16 16:24:41 LOG7[140735181681408]: Snagged 64 random bytes from /var/root/.rnd
+2015.06.16 16:24:41 LOG7[140735181681408]: Wrote 1024 new random bytes to /var/root/.rnd
+2015.06.16 16:24:41 LOG7[140735181681408]: PRNG seeded successfully
+2015.06.16 16:24:41 LOG6[140735181681408]: Initializing service [fxibrk]
+2015.06.16 16:24:41 LOG7[140735181681408]: No private key specified
+2015.06.16 16:24:41 LOG7[140735181681408]: SSL options: 0x03000004 (+0x03000000, -0x00000000)
+2015.06.16 16:24:41 LOG5[140735181681408]: Configuration successful
+2015.06.16 16:24:41 LOG7[140735181681408]: Listening file descriptor created (FD=6)
+2015.06.16 16:24:41 LOG7[140735181681408]: Service [fxibrk] (FD=6) bound to 127.0.0.1:2506
+2015.06.16 16:24:41 LOG7[140735181681408]: Created pid file /var/run/stunnel.pid
+2015.06.16 16:26:59 LOG7[140735181681408]: Service [fxibrk] accepted (FD=3) from 127.0.0.1:64247
+2015.06.16 16:26:59 LOG7[4551426048]: Service [fxibrk] started
+2015.06.16 16:26:59 LOG5[4551426048]: Service [fxibrk] accepted connection from 127.0.0.1:64247
+2015.06.16 16:26:59 LOG6[4551426048]: s_connect: connecting 70.42.18.243:2506
+2015.06.16 16:26:59 LOG7[4551426048]: s_connect: s_poll_wait 70.42.18.243:2506: waiting 30 seconds
+2015.06.16 16:27:00 LOG5[4551426048]: s_connect: connected 70.42.18.243:2506
+2015.06.16 16:27:00 LOG5[4551426048]: Service [fxibrk] connected remote server from 192.168.0.106:64248
+2015.06.16 16:27:00 LOG7[4551426048]: Remote socket (FD=8) initialized
+2015.06.16 16:27:00 LOG6[4551426048]: SNI: sending servername: 70.42.18.243
+2015.06.16 16:27:00 LOG7[4551426048]: SSL state (connect): before/connect initialization
+2015.06.16 16:27:00 LOG7[4551426048]: SSL state (connect): SSLv2/v3 write client hello A
+2015.06.16 16:27:00 LOG7[4551426048]: SSL state (connect): SSLv3 read server hello A
+2015.06.16 16:27:00 LOG7[4551426048]: SSL state (connect): SSLv3 read server certificate A
+2015.06.16 16:27:00 LOG7[4551426048]: SSL state (connect): SSLv3 read server done A
+2015.06.16 16:27:00 LOG7[4551426048]: SSL state (connect): SSLv3 write client key exchange A
+2015.06.16 16:27:00 LOG7[4551426048]: SSL state (connect): SSLv3 write change cipher spec A
+2015.06.16 16:27:00 LOG7[4551426048]: SSL state (connect): SSLv3 write finished A
+2015.06.16 16:27:00 LOG7[4551426048]: SSL state (connect): SSLv3 flush data
+2015.06.16 16:27:00 LOG7[4551426048]: SSL state (connect): SSLv3 read finished A
+2015.06.16 16:27:00 LOG7[4551426048]:    1 items in the session cache
+2015.06.16 16:27:00 LOG7[4551426048]:    1 client connects (SSL_connect())
+2015.06.16 16:27:00 LOG7[4551426048]:    1 client connects that finished
+2015.06.16 16:27:00 LOG7[4551426048]:    0 client renegotiations requested
+2015.06.16 16:27:00 LOG7[4551426048]:    0 server connects (SSL_accept())
+2015.06.16 16:27:00 LOG7[4551426048]:    0 server connects that finished
+2015.06.16 16:27:00 LOG7[4551426048]:    0 server renegotiations requested
+2015.06.16 16:27:00 LOG7[4551426048]:    0 session cache hits
+2015.06.16 16:27:00 LOG7[4551426048]:    0 external session cache hits
+2015.06.16 16:27:00 LOG7[4551426048]:    0 session cache misses
+2015.06.16 16:27:00 LOG7[4551426048]:    0 session cache timeouts
+2015.06.16 16:27:00 LOG7[4551426048]: Peer certificate was cached (887 bytes)
+2015.06.16 16:27:00 LOG6[4551426048]: SSL connected: new session negotiated
+2015.06.16 16:27:00 LOG6[4551426048]: Negotiated TLSv1 ciphersuite AES256-SHA (256-bit encryption)
+2015.06.16 16:27:00 LOG6[4551426048]: Compression: null, expansion: null
+2015.06.16 16:27:04 LOG6[4551426048]: Read socket closed (readsocket)
+2015.06.16 16:27:04 LOG7[4551426048]: Sending close_notify alert
+2015.06.16 16:27:04 LOG7[4551426048]: SSL alert (write): warning: close notify
+2015.06.16 16:27:04 LOG6[4551426048]: SSL_shutdown successfully sent close_notify alert
+2015.06.16 16:27:04 LOG7[4551426048]: SSL alert (read): warning: close notify
+2015.06.16 16:27:04 LOG6[4551426048]: SSL closed (SSL_read)
+2015.06.16 16:27:04 LOG7[4551426048]: Failed to send socket write shutdown
+2015.06.16 16:27:04 LOG5[4551426048]: Connection closed: 1532 byte(s) sent to SSL, 5816 byte(s) sent to socket
+2015.06.16 16:27:04 LOG7[4551426048]: Remote socket (FD=8) closed
+2015.06.16 16:27:04 LOG7[4551426048]: Local socket (FD=3) closed
+2015.06.16 16:27:04 LOG7[4551426048]: Service [fxibrk] finished (0 left)
+2015.06.16 16:27:32 LOG7[140735181681408]: Service [fxibrk] accepted (FD=3) from 127.0.0.1:64251
+2015.06.16 16:27:32 LOG7[4551426048]: Service [fxibrk] started
+2015.06.16 16:27:32 LOG5[4551426048]: Service [fxibrk] accepted connection from 127.0.0.1:64251
+2015.06.16 16:27:32 LOG6[4551426048]: s_connect: connecting 70.42.18.243:2506
+2015.06.16 16:27:32 LOG7[4551426048]: s_connect: s_poll_wait 70.42.18.243:2506: waiting 30 seconds
+2015.06.16 16:27:32 LOG5[4551426048]: s_connect: connected 70.42.18.243:2506
+2015.06.16 16:27:32 LOG5[4551426048]: Service [fxibrk] connected remote server from 192.168.0.106:64252
+2015.06.16 16:27:32 LOG7[4551426048]: Remote socket (FD=8) initialized
+2015.06.16 16:27:32 LOG6[4551426048]: SNI: sending servername: 70.42.18.243
+2015.06.16 16:27:32 LOG7[4551426048]: SSL state (connect): before/connect initialization
+2015.06.16 16:27:32 LOG7[4551426048]: SSL state (connect): SSLv3 write client hello A
+2015.06.16 16:27:32 LOG7[4551426048]: SSL state (connect): SSLv3 read server hello A
+2015.06.16 16:27:32 LOG7[4551426048]: SSL state (connect): SSLv3 read finished A
+2015.06.16 16:27:32 LOG7[4551426048]: SSL state (connect): SSLv3 write change cipher spec A
+2015.06.16 16:27:32 LOG7[4551426048]: SSL state (connect): SSLv3 write finished A
+2015.06.16 16:27:32 LOG7[4551426048]: SSL state (connect): SSLv3 flush data
+2015.06.16 16:27:32 LOG7[4551426048]:    1 items in the session cache
+2015.06.16 16:27:32 LOG7[4551426048]:    2 client connects (SSL_connect())
+2015.06.16 16:27:32 LOG7[4551426048]:    2 client connects that finished
+2015.06.16 16:27:32 LOG7[4551426048]:    0 client renegotiations requested
+2015.06.16 16:27:32 LOG7[4551426048]:    0 server connects (SSL_accept())
+2015.06.16 16:27:32 LOG7[4551426048]:    0 server connects that finished
+2015.06.16 16:27:32 LOG7[4551426048]:    0 server renegotiations requested
+2015.06.16 16:27:32 LOG7[4551426048]:    1 session cache hits
+2015.06.16 16:27:32 LOG7[4551426048]:    0 external session cache hits
+2015.06.16 16:27:32 LOG7[4551426048]:    0 session cache misses
+2015.06.16 16:27:32 LOG7[4551426048]:    0 session cache timeouts
+2015.06.16 16:27:32 LOG6[4551426048]: SSL connected: previous session reused
+2015.06.16 16:27:37 LOG6[4551426048]: Read socket closed (readsocket)
+2015.06.16 16:27:37 LOG7[4551426048]: Sending close_notify alert
+2015.06.16 16:27:37 LOG7[4551426048]: SSL alert (write): warning: close notify
+2015.06.16 16:27:37 LOG6[4551426048]: SSL_shutdown successfully sent close_notify alert
+2015.06.16 16:27:37 LOG7[4551426048]: SSL alert (read): warning: close notify
+2015.06.16 16:27:37 LOG6[4551426048]: SSL closed (SSL_read)
+2015.06.16 16:27:37 LOG7[4551426048]: Failed to send socket write shutdown
+2015.06.16 16:27:37 LOG5[4551426048]: Connection closed: 1532 byte(s) sent to SSL, 7500 byte(s) sent to socket
+2015.06.16 16:27:37 LOG7[4551426048]: Remote socket (FD=8) closed
+2015.06.16 16:27:37 LOG7[4551426048]: Local socket (FD=3) closed
+2015.06.16 16:27:37 LOG7[4551426048]: Service [fxibrk] finished (0 left)
+2015.06.16 16:28:40 LOG7[140735181681408]: Service [fxibrk] accepted (FD=3) from 127.0.0.1:64257
+2015.06.16 16:28:40 LOG7[4551426048]: Service [fxibrk] started
+2015.06.16 16:28:40 LOG5[4551426048]: Service [fxibrk] accepted connection from 127.0.0.1:64257
+2015.06.16 16:28:40 LOG6[4551426048]: s_connect: connecting 70.42.18.243:2506
+2015.06.16 16:28:40 LOG7[4551426048]: s_connect: s_poll_wait 70.42.18.243:2506: waiting 30 seconds
+2015.06.16 16:28:40 LOG5[4551426048]: s_connect: connected 70.42.18.243:2506
+2015.06.16 16:28:40 LOG5[4551426048]: Service [fxibrk] connected remote server from 192.168.0.106:64258
+2015.06.16 16:28:40 LOG7[4551426048]: Remote socket (FD=8) initialized
+2015.06.16 16:28:40 LOG6[4551426048]: SNI: sending servername: 70.42.18.243
+2015.06.16 16:28:40 LOG7[4551426048]: SSL state (connect): before/connect initialization
+2015.06.16 16:28:40 LOG7[4551426048]: SSL state (connect): SSLv3 write client hello A
+2015.06.16 16:28:40 LOG7[4551426048]: SSL state (connect): SSLv3 read server hello A
+2015.06.16 16:28:40 LOG7[4551426048]: SSL state (connect): SSLv3 read finished A
+2015.06.16 16:28:40 LOG7[4551426048]: SSL state (connect): SSLv3 write change cipher spec A
+2015.06.16 16:28:40 LOG7[4551426048]: SSL state (connect): SSLv3 write finished A
+2015.06.16 16:28:40 LOG7[4551426048]: SSL state (connect): SSLv3 flush data
+2015.06.16 16:28:40 LOG7[4551426048]:    1 items in the session cache
+2015.06.16 16:28:40 LOG7[4551426048]:    3 client connects (SSL_connect())
+2015.06.16 16:28:40 LOG7[4551426048]:    3 client connects that finished
+2015.06.16 16:28:40 LOG7[4551426048]:    0 client renegotiations requested
+2015.06.16 16:28:40 LOG7[4551426048]:    0 server connects (SSL_accept())
+2015.06.16 16:28:40 LOG7[4551426048]:    0 server connects that finished
+2015.06.16 16:28:40 LOG7[4551426048]:    0 server renegotiations requested
+2015.06.16 16:28:40 LOG7[4551426048]:    2 session cache hits
+2015.06.16 16:28:40 LOG7[4551426048]:    0 external session cache hits
+2015.06.16 16:28:40 LOG7[4551426048]:    0 session cache misses
+2015.06.16 16:28:40 LOG7[4551426048]:    0 session cache timeouts
+2015.06.16 16:28:40 LOG6[4551426048]: SSL connected: previous session reused
+2015.06.16 16:28:42 LOG7[4551426048]: SSL_read returned WANT_READ: retrying
+2015.06.16 16:29:37 LOG7[4551426048]: SSL_read returned WANT_READ: retrying
+2015.06.16 16:29:43 LOG6[4551426048]: Read socket closed (readsocket)
+2015.06.16 16:29:43 LOG7[4551426048]: Sending close_notify alert
+2015.06.16 16:29:43 LOG7[4551426048]: SSL alert (write): warning: close notify
+2015.06.16 16:29:43 LOG6[4551426048]: SSL_shutdown successfully sent close_notify alert
+2015.06.16 16:29:44 LOG7[4551426048]: SSL alert (read): warning: close notify
+2015.06.16 16:29:44 LOG6[4551426048]: SSL closed (SSL_read)
+2015.06.16 16:29:44 LOG7[4551426048]: Failed to send socket write shutdown
+2015.06.16 16:29:44 LOG5[4551426048]: Connection closed: 1741 byte(s) sent to SSL, 87032 byte(s) sent to socket
+2015.06.16 16:29:44 LOG7[4551426048]: Remote socket (FD=8) closed
+2015.06.16 16:29:44 LOG7[4551426048]: Local socket (FD=3) closed
+2015.06.16 16:29:44 LOG7[4551426048]: Service [fxibrk] finished (0 left)
+2015.06.16 16:30:43 LOG7[140735181681408]: Service [fxibrk] accepted (FD=3) from 127.0.0.1:64304
+2015.06.16 16:30:43 LOG7[4551426048]: Service [fxibrk] started
+2015.06.16 16:30:43 LOG5[4551426048]: Service [fxibrk] accepted connection from 127.0.0.1:64304
+2015.06.16 16:30:43 LOG6[4551426048]: s_connect: connecting 70.42.18.243:2506
+2015.06.16 16:30:43 LOG7[4551426048]: s_connect: s_poll_wait 70.42.18.243:2506: waiting 30 seconds
+2015.06.16 16:30:43 LOG5[4551426048]: s_connect: connected 70.42.18.243:2506
+2015.06.16 16:30:43 LOG5[4551426048]: Service [fxibrk] connected remote server from 192.168.0.106:64305
+2015.06.16 16:30:43 LOG7[4551426048]: Remote socket (FD=8) initialized
+2015.06.16 16:30:43 LOG6[4551426048]: SNI: sending servername: 70.42.18.243
+2015.06.16 16:30:43 LOG7[4551426048]: SSL state (connect): before/connect initialization
+2015.06.16 16:30:43 LOG7[4551426048]: SSL state (connect): SSLv3 write client hello A
+2015.06.16 16:30:43 LOG7[4551426048]: SSL state (connect): SSLv3 read server hello A
+2015.06.16 16:30:43 LOG7[4551426048]: SSL state (connect): SSLv3 read finished A
+2015.06.16 16:30:43 LOG7[4551426048]: SSL state (connect): SSLv3 write change cipher spec A
+2015.06.16 16:30:43 LOG7[4551426048]: SSL state (connect): SSLv3 write finished A
+2015.06.16 16:30:43 LOG7[4551426048]: SSL state (connect): SSLv3 flush data
+2015.06.16 16:30:43 LOG7[4551426048]:    1 items in the session cache
+2015.06.16 16:30:43 LOG7[4551426048]:    4 client connects (SSL_connect())
+2015.06.16 16:30:43 LOG7[4551426048]:    4 client connects that finished
+2015.06.16 16:30:43 LOG7[4551426048]:    0 client renegotiations requested
+2015.06.16 16:30:43 LOG7[4551426048]:    0 server connects (SSL_accept())
+2015.06.16 16:30:43 LOG7[4551426048]:    0 server connects that finished
+2015.06.16 16:30:43 LOG7[4551426048]:    0 server renegotiations requested
+2015.06.16 16:30:43 LOG7[4551426048]:    3 session cache hits
+2015.06.16 16:30:43 LOG7[4551426048]:    0 external session cache hits
+2015.06.16 16:30:43 LOG7[4551426048]:    0 session cache misses
+2015.06.16 16:30:43 LOG7[4551426048]:    0 session cache timeouts
+2015.06.16 16:30:43 LOG6[4551426048]: SSL connected: previous session reused
+2015.06.16 16:30:46 LOG7[4551426048]: SSL_read returned WANT_READ: retrying
+2015.06.16 16:30:56 LOG6[4551426048]: Read socket closed (readsocket)
+2015.06.16 16:30:56 LOG7[4551426048]: Sending close_notify alert
+2015.06.16 16:30:56 LOG7[4551426048]: SSL alert (write): warning: close notify
+2015.06.16 16:30:56 LOG6[4551426048]: SSL_shutdown successfully sent close_notify alert
+2015.06.16 16:30:56 LOG7[4551426048]: SSL alert (read): warning: close notify
+2015.06.16 16:30:56 LOG6[4551426048]: SSL closed (SSL_read)
+2015.06.16 16:30:56 LOG7[4551426048]: Sent socket write shutdown
+2015.06.16 16:30:56 LOG5[4551426048]: Connection closed: 1532 byte(s) sent to SSL, 9937 byte(s) sent to socket
+2015.06.16 16:30:56 LOG7[4551426048]: Remote socket (FD=8) closed
+2015.06.16 16:30:56 LOG7[4551426048]: Local socket (FD=3) closed
+2015.06.16 16:30:56 LOG7[4551426048]: Service [fxibrk] finished (0 left)
+2015.06.16 17:08:17 LOG7[140735181681408]: Dispatching signals from the signal pipe
+2015.06.16 17:08:17 LOG3[140735181681408]: Received signal 2; terminating
+2015.06.16 17:08:17 LOG7[140735181681408]: Closing service [fxibrk]
+2015.06.16 17:08:17 LOG7[140735181681408]: Service [fxibrk] closed (FD=6)
+2015.06.16 17:08:17 LOG7[140735181681408]: Service [fxibrk] closed
+2015.06.16 17:08:17 LOG7[140735181681408]: removing pid file /var/run/stunnel.pid

@@ -1,0 +1,6 @@
+fixClient/PriceUpdateListener.class
+fixClient/FixApp.class
+domain/PriceUpdatePojo.class
+main/Main.class
+main/JmsApplication.class
+fixClient/FixClient.class
