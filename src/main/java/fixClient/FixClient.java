@@ -112,7 +112,7 @@ public class FixClient {
 			chfUpdatesQ.enqueue(theUpdate);
 			break;
 		default:
-			symbol = "Invalid symbol: broker queue not found";
+			System.out.println("Invalid symbol: broker queue not found");
 			break;
 		}
 	}
