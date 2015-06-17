@@ -3,7 +3,6 @@ package fixClient;
 import java.util.Date;
 import java.util.UUID;
 
-import domain.PriceUpdatePojo;
 import quickfix.Application;
 import quickfix.FieldNotFound;
 import quickfix.Group;
@@ -133,24 +132,27 @@ public class FixApp extends MessageCracker implements Application {
 	}
 	
 	public void onMessage(MarketDataIncrementalRefresh aMarketDataIncrementalRefresh, SessionID aSessionID){
-		PriceUpdatePojo update = null;
+		StringBuilder sb = new StringBuilder();
 		try{
 			quickfix.fix44.MarketDataIncrementalRefresh.NoMDEntries parentgroup = new quickfix.fix44.MarketDataIncrementalRefresh.NoMDEntries();
 			int numOfGroups = aMarketDataIncrementalRefresh.getField(new NoMDEntries()).getValue();
-			for(int i=1; i<numOfGroups; i++){
-				update = new PriceUpdatePojo();
-				Group childGroup = aMarketDataIncrementalRefresh.getGroup(i, parentgroup);
-				char entryType = childGroup.getField(new MDEntryType("0".charAt(0))).getValue();
-				String symbol = childGroup.getField(new Symbol()).getValue();
-				Double thePrice = childGroup.getField(new MDEntryPx()).getValue();
-				String theUpdate = "{\"symbol\":\""+symbol+"\","
-								+ "\"entryType\":\""+entryType+"\","
-								+ "\"price\":\""+thePrice+"\"}";
-				update.addUpdate(theUpdate);
-				update.setSymbol(symbol);
-				System.out.println(update.toJSON());
+			Group childGroup = aMarketDataIncrementalRefresh.getGroup(1, parentgroup);
+			String symbol = childGroup.getField(new Symbol()).getValue();
+			char entryType = childGroup.getField(new MDEntryType("0".charAt(0))).getValue();
+			Double thePrice = childGroup.getField(new MDEntryPx()).getValue();
+			sb.append("{\"symbol\":\""+symbol+"\","
+						+ "\"entryType\":\""+entryType+"\","
+						+ "\"price\":\""+thePrice+"\"}");
+			if(numOfGroups == 2){
+				Group childGroup2 = aMarketDataIncrementalRefresh.getGroup(2, parentgroup);
+				char entryType2 = childGroup2.getField(new MDEntryType("0".charAt(0))).getValue();
+				Double thePrice2 = childGroup2.getField(new MDEntryPx()).getValue();
+				sb.append("{\"symbol\":\""+symbol+"\","
+						+ "\"entryType\":\""+entryType2+"\","
+						+ "\"price\":\""+thePrice2+"\"}");
 			}
-			client.publishPriceUpdate(update);
+			//System.out.println(sb.toString());
+			client.publishPriceUpdate(sb.toString(), symbol);
 		} catch (FieldNotFound e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

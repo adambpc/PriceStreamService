@@ -7,8 +7,6 @@ import javax.jms.*;
 import org.apache.activemq.ActiveMQConnection;
 import org.apache.activemq.ActiveMQConnectionFactory;
 
-import domain.PriceUpdatePojo;
-
 public class JmsApplication {
 
     private final String url = ActiveMQConnection.DEFAULT_BROKER_URL;
@@ -39,11 +37,11 @@ public class JmsApplication {
     	}
     }
     
-    public void sendPriceUpdate(PriceUpdatePojo theObject){
+    public void sendPriceUpdate(String theUpdate, String symbol){
     	 try {
     		TextMessage textMessage = session.createTextMessage();
-			textMessage.setText(theObject.toJSON());
-			producers.get(theObject.getSymbol()).send(textMessage);
+			textMessage.setText(theUpdate);
+			producers.get(symbol).send(textMessage);
 		} catch (JMSException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

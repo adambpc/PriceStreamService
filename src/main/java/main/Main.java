@@ -10,7 +10,7 @@ public class Main {
 		
 		try {
 			JmsApplication jmsApp = new JmsApplication();
-			//jmsApp.getConnection();
+			jmsApp.getConnection();
 			client = new FixClient(jmsApp); 
 			client.beginFixStream();
 		} catch (Exception e) {

@@ -1,5 +1,4 @@
 package fixClient;
-import domain.PriceUpdatePojo;
 import main.JmsApplication;
 import quickfix.ConfigError;
 import quickfix.DefaultMessageFactory;
@@ -69,7 +68,7 @@ public class FixClient {
 		running = false;
 	}
 
-	public void publishPriceUpdate(PriceUpdatePojo update) {
-			jmsApp.sendPriceUpdate(update);
+	public void publishPriceUpdate(String theUpdate, String symbol) {
+			jmsApp.sendPriceUpdate(theUpdate, symbol);
 	}
 }
