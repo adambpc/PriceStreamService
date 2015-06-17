@@ -12,11 +12,11 @@ private ConcurrentLinkedQueue<String> list = new ConcurrentLinkedQueue<String>()
 		return (list.size() == 0);
 	}
 
-	public void enqueue(String item){
+	public synchronized void enqueue(String item){
 		list.add(item);
 	}
 
-	public String dequeue() {
+	public synchronized String dequeue() {
 		return list.poll();
 	}
 

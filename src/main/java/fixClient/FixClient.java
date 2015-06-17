@@ -29,15 +29,21 @@ public class FixClient {
 	UpdatesQueue jpyUpdatesQ = new UpdatesQueue();
 	UpdatesQueue cadUpdatesQ = new UpdatesQueue();
 	UpdatesQueue chfUpdatesQ = new UpdatesQueue();
-	SendFromQueueThread thread1 = new SendFromQueueThread(eurUpdatesQ, jmsApp, "EUR/USD");
-	SendFromQueueThread thread2 = new SendFromQueueThread(cablUpdatesQ, jmsApp, "GBP/USD");
-	SendFromQueueThread thread3 = new SendFromQueueThread(audUpdatesQ, jmsApp, "AUD/USD");
-	SendFromQueueThread thread4 = new SendFromQueueThread(jpyUpdatesQ, jmsApp, "USD/JPY");
-	SendFromQueueThread thread5 = new SendFromQueueThread(cadUpdatesQ, jmsApp, "USD/CAD");
-	SendFromQueueThread thread6 = new SendFromQueueThread(chfUpdatesQ, jmsApp, "USD/CHF");
+	SendFromQueueThread thread1;
+	SendFromQueueThread thread2;
+	SendFromQueueThread thread3;
+	SendFromQueueThread thread4;
+	SendFromQueueThread thread5;
+	SendFromQueueThread thread6;
 
 	public FixClient(JmsApplication jmsappl) {
 		jmsApp = jmsappl;
+		thread1 = new SendFromQueueThread(eurUpdatesQ, jmsApp, "EUR/USD");
+		thread2 = new SendFromQueueThread(cablUpdatesQ, jmsApp, "GBP/USD");
+		thread3 = new SendFromQueueThread(audUpdatesQ, jmsApp, "AUD/USD");
+		thread4 = new SendFromQueueThread(jpyUpdatesQ, jmsApp, "USD/JPY");
+		thread5 = new SendFromQueueThread(cadUpdatesQ, jmsApp, "USD/CAD");
+		thread6 = new SendFromQueueThread(chfUpdatesQ, jmsApp, "USD/CHF");
 	}
 
 	public void beginFixStream() {

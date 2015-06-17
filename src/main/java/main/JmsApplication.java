@@ -25,7 +25,7 @@ public class JmsApplication {
         connection = connectionFactory.createConnection();
         connection.start();
 
-        Session session = connection.createSession(false,Session.AUTO_ACKNOWLEDGE);
+        session = connection.createSession(false,Session.AUTO_ACKNOWLEDGE);
         producers.put("EUR/USD", session.createProducer(session.createTopic("EUR/USD")));
         producers.put("GBP/USD", session.createProducer(session.createTopic("GBP/USD")));
         producers.put("AUD/USD", session.createProducer(session.createTopic("AUD/USD")));
@@ -51,17 +51,18 @@ public class JmsApplication {
     	}
     }
     
-    public synchronized void sendPriceUpdate(String theUpdate, String symbol){
-    	 try {
-    		TextMessage textMessage = session.createTextMessage();
-			textMessage.setText(theUpdate);
-			if(producers.get(symbol) != null){
-				producers.get(symbol).send(textMessage);
-			}
-			else System.out.println("CANNOT FIND JMS PRODUCER FOR SYMBOL >>> " + symbol);
-		} catch (JMSException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+    public TextMessage createMessage(String theUpdate){
+    	try{
+        	TextMessage textMessage = session.createTextMessage();
+    		textMessage.setText(theUpdate);
+    		return textMessage;
+    	}catch(Exception e){
+    		e.printStackTrace();
+    	}
+    	return null;
+    }
+    
+    public MessageProducer getProducer(String sym){
+    	return producers.get(sym);
     }
 }

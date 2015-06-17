@@ -1,15 +1,20 @@
 package main;
 
+import javax.jms.MessageProducer;
+import javax.jms.TextMessage;
+
 public class SendFromQueueThread implements Runnable {
 	
 	UpdatesQueue updatesQ = null;
 	JmsApplication jmsApp = null;
 	String symbol = null;
+	MessageProducer producer = null;
 	
 	public SendFromQueueThread(UpdatesQueue q, JmsApplication app, String sym){
 		symbol = sym;
 		updatesQ = q;
 		jmsApp = app;
+		producer = app.getProducer(sym);
 	}
 
 	@Override
@@ -18,9 +23,14 @@ public class SendFromQueueThread implements Runnable {
 		try {
 			while(true){
 				if(!updatesQ.isEmpty()){
-					System.out.println(updatesQ.peek());
-					//updatesQ.dequeue();
-					jmsApp.sendPriceUpdate(updatesQ.dequeue(), symbol);
+					try {
+						String smessage = updatesQ.dequeue();
+						TextMessage message = createMessage(smessage);
+						//System.out.println(message.toString());
+						producer.send(message);
+					} catch (Exception e) {
+						e.printStackTrace();
+					}
 				}
 				else {
 					Thread.sleep(sleeptime);
@@ -31,5 +41,9 @@ public class SendFromQueueThread implements Runnable {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+	}
+	
+	private TextMessage createMessage(String theUpdate){
+		return jmsApp.createMessage(theUpdate);
 	}
 }
