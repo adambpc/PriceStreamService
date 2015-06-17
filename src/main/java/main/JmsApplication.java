@@ -2,7 +2,12 @@ package main;
 
 import java.util.HashMap;
 
-import javax.jms.*;
+import javax.jms.Connection;
+import javax.jms.ConnectionFactory;
+import javax.jms.JMSException;
+import javax.jms.MessageProducer;
+import javax.jms.Session;
+import javax.jms.TextMessage;
 
 import org.apache.activemq.ActiveMQConnection;
 import org.apache.activemq.ActiveMQConnectionFactory;
@@ -27,6 +32,15 @@ public class JmsApplication {
         producers.put("USD/JPY", session.createProducer(session.createTopic("USD/JPY")));
         producers.put("USD/CAD", session.createProducer(session.createTopic("USD/CAD")));
         producers.put("USD/CHF", session.createProducer(session.createTopic("USD/CHF")));
+        try {
+    		TextMessage textMessage = session.createTextMessage();
+			textMessage.setText("STARTED PRICE STREAMS");
+			String symbol = "EUR/USD";
+			producers.get(symbol).send(textMessage);
+		} catch (JMSException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
     }
     
     public void closeConnection(){
@@ -37,11 +51,14 @@ public class JmsApplication {
     	}
     }
     
-    public void sendPriceUpdate(String theUpdate, String symbol){
+    public synchronized void sendPriceUpdate(String theUpdate, String symbol){
     	 try {
     		TextMessage textMessage = session.createTextMessage();
 			textMessage.setText(theUpdate);
-			producers.get(symbol).send(textMessage);
+			if(producers.get(symbol) != null){
+				producers.get(symbol).send(textMessage);
+			}
+			else System.out.println("CANNOT FIND JMS PRODUCER FOR SYMBOL >>> " + symbol);
 		} catch (JMSException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

@@ -1,4 +1,6 @@
 fixClient/PriceUpdateListener.class
+main/UpdatesQueue.class
+main/SendFromQueueThread.class
 fixClient/FixApp.class
 main/Main.class
 main/JmsApplication.class

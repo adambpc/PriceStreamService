@@ -1,5 +1,7 @@
 /Users/adamhardie/K/Eclipse/PriceStreamService/src/main/java/fixClient/FixApp.java
+/Users/adamhardie/K/Eclipse/PriceStreamService/src/main/java/main/UpdatesQueue.java
 /Users/adamhardie/K/Eclipse/PriceStreamService/src/main/java/main/JmsApplication.java
 /Users/adamhardie/K/Eclipse/PriceStreamService/src/main/java/fixClient/PriceUpdateListener.java
+/Users/adamhardie/K/Eclipse/PriceStreamService/src/main/java/main/SendFromQueueThread.java
 /Users/adamhardie/K/Eclipse/PriceStreamService/src/main/java/fixClient/FixClient.java
 /Users/adamhardie/K/Eclipse/PriceStreamService/src/main/java/main/Main.java

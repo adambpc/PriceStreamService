@@ -152,7 +152,7 @@ public class FixApp extends MessageCracker implements Application {
 						+ "\"price\":\""+thePrice2+"\"}");
 			}
 			//System.out.println(sb.toString());
-			client.publishPriceUpdate(sb.toString(), symbol);
+			client.queuePriceUpdate(sb.toString(), symbol);
 		} catch (FieldNotFound e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
